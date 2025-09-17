@@ -1,5 +1,28 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Welcome"
 ---
 
+Set up a custom welcome message for new members.
+
+## Why use a welcome message?
+
+- Greets new users automatically.
+- Makes your server feel friendly and active.
+- Can include embeds, images, and variables.
+
+## How to set it up
+
+1. Create an embed for your welcome message (optional):  
+   `n!embed create welcomeEmbed`
+2. Edit the embed with your text and variables:  
+   `n!embed edit welcomeEmbed description Welcome, {user.mention}!`
+3. Set the welcome message:  
+   `n!welcome embed welcomeEmbed`
+4. Choose the channel:  
+   `n!welcome channel #welcome`
+5. Enable welcome messages:  
+   `n!welcome enable`
+
+**Tip:** Use variables like `{user.username}` and `{server.name}` for a personal touch.
+
+---

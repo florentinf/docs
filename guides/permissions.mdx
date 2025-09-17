@@ -1,5 +1,24 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Permissions"
 ---
 
+Control who can use which Neon commands.
+
+## Types of permissions
+
+- Discord permissions (set in server roles).
+- Mod roles (set with `n!modrole`).
+- [Fake permissions ](fakeperms.mdx)(set with `n!fp grant`).
+
+## How to set up
+
+1. Give roles the correct Discord permissions.
+2. Assign a mod role:\
+   `n!modrole add @mods`
+3. Grant fake permissions for extra control:\
+   `n!fp grant @mods ban_members`
+4. Remove permissions if needed:\
+   `n!modrole remove @mods`\
+   `n!fp remove @mods ban_members`
+
+**Tip:** Only give powerful permissions to trusted users.

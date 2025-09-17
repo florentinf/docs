@@ -1,5 +1,150 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Last.fm Commands"
 ---
 
+Set up Last.fm with neon to show your music and stats.
+
+## What is Last.fm?
+
+Last.fm tracks the music you play. Neon can read that and show it in Discord.
+
+### Step 1 — Create a Last.fm account
+
+1. Go to [last.fm](https://www.last.fm/join) and [sign up](https://www.last.fm/join).
+2. Confirm your email.
+3. Enable scrobbling.
+
+<Note>
+  You need to remember your Last.fm username so you can afterwards connect it to neon.
+</Note>
+
+### Step 2 — Link your account to neon
+
+Link once per user.
+
+```
+n!login [lastfm_username]
+```
+
+Example:
+
+```
+n!login f-ff
+```
+
+Check your link:
+
+```
+n!whois
+```
+
+Unlink (if needed):
+
+```
+n!logout
+```
+
+### Step 3 — Test it
+
+See your current track:
+
+```
+n!nowplaying
+```
+
+Check someone else:
+
+```
+n!nowplaying @username
+```
+
+## Popular commands
+
+These are the most used. Full command list lives on the Commands page.
+
+- **Now playing**\
+  Shows your current track.\
+  `n!nowplaying (user)`
+- **Top artists**\
+  Your top artists for a period.\
+  `n!topartists (period) (user|lastfm_username)`
+- **Top tracks**\
+  Your top tracks for a period.\
+  `n!toptracks (period) (user|lastfm_username)`
+- **Top artists (image)**\
+  Makes a collage image.\
+  `n!imgtar (period) (user|lastfm_username)`
+- **Reactions on now playing**\
+  Set emote reactions on your NP message.\
+  `n!fmreactions [emote1] (emote2) …`\
+  Reset/disable/enable:\
+  `n!fmreactions reset` · `n!fmreactions disable` · `n!fmreactions enable`
+
+Server-wide reactions (Manage Server required):
+
+```
+n!fmreactions server [emote1] (emote2) (emote3) (emote4) (emote5)
+n!fmreactions server reset
+n!fmreactions server disable
+n!fmreactions server enable
+```
+
+## Last.fm Custom Embed
+
+Use `n!fmembed` to fully customize your now playing embed.
+
+- Pick global (all servers) or server-only (needs Neon Premium).
+- Change style, text, and variables in the menu.
+- Switch or reset any time.
+
+Commands:
+```
+n!fmembed
+n!fmembed enable
+n!fmembed disable
+n!fmembed reset
+n!fmembed variables
+```
+
+
+## Period values
+
+Use a time window for “top” commands. Examples:
+
+- 7days
+- 1month
+- 3months
+- 6months
+- 12months
+- overall
+
+Example:
+
+```
+n!topartists 7days
+n!toptracks overall @nxsi
+```
+
+## Quick examples
+
+```
+n!login nxsii
+n!nowplaying
+n!topartists 7days
+n!toptracks overall @nxsi
+n!imgtar 7days nxsii
+n!fmreactions 🔼 🔽
+```
+
+## Tips
+
+- Mention a user, or pass a Last.fm username, to check others.
+- Cooldowns apply (you may need to wait a second or two).
+
+## Troubleshooting
+
+- “User not found”: check your Last.fm username spelling.
+- No data: make sure you have scrobbles on Last.fm.
+- Nothing updates: your player may not be scrobbling.
+- Reactions not changing: you may need NeonPremium for more than 2 custom reactions.
+- Server reactions: you need Manage Server to run the server subcommands.

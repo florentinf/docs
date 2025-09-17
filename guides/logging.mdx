@@ -1,5 +1,48 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Modlogs"
 ---
 
+Log and track all important server events and moderation actions.
+
+## Usage
+
+Set a log channel for each event type:
+
+```
+n!modlogs [event] [channel]
+```
+
+Example:
+
+```
+n!modlogs moderation #logs
+```
+
+## Log Events
+
+| Event      | What it logs                                  |
+| ---------- | --------------------------------------------- |
+| moderation | Bans, kicks, timeouts, unbans, warnings, etc. |
+| server     | Server/user changes (roles, channels, etc.)   |
+| join       | Member joins                                  |
+| message    | Message deletions and edits                   |
+| default    | Fallback channel for all events               |
+
+## Extra Features
+
+- **Disable logs:**\
+  `n!modlogs disable [event/all]`
+- **Ignore channel:**\
+  `n!modlogs ignored add [channel]`\
+  `n!modlogs ignored remove [channel]`\
+  `n!modlogs ignored list`
+- **Legacy style:**\
+  `n!modlogs legacystyle on/off`
+- **View config:**\
+  `n!modlogs config`
+
+## Tips
+
+- Use different channels for each event or one fallback channel.
+- Ignore channels you don’t want logged.
+- Only users with Manage Server can set up modlogs.
