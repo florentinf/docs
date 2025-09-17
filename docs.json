@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Mint Starter Kit",
+  "name": "neon",
   "theme": "mint",
   "colors": {
     "primary": "#16A34A"
@@ -8,7 +8,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Important",
+        "tab": "Docs",
         "groups": [
           {
             "group": "Getting started",
