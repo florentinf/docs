@@ -1,5 +1,90 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Variables"
 ---
 
+You can use variables in Neon embeds to show live info about users, servers, or music. Here’s a quick guide for each type.
+
+## Normal Variables
+
+| Variable                | Explanation                  |
+| ----------------------- | ---------------------------- |
+| `{user.id}`             | User's Discord ID            |
+| `{user.tag}`            | Username#1234                |
+| `{user.username}`       | Username only                |
+| `{user.mention}`        | Mentions the user            |
+| `{user.avatar}`         | User's avatar URL            |
+| `{user.nickname}`       | User's server nickname       |
+| `{user.rolehex}`        | User's top role color (hex)  |
+| `{user.createdat}`      | When the user joined Discord |
+| `{server.id}`           | Server's ID                  |
+| `{server.name}`         | Server name                  |
+| `{server.membercount}`  | Total members                |
+| `{format.membercount}`  | Member count, formatted      |
+| `{server.botcount}`     | Number of bots               |
+| `{server.humancount}`   | Number of humans             |
+| `{format.humancount}`   | Human count, formatted       |
+| `{server.icon}`         | Server icon URL              |
+| `{server.rolecount}`    | Number of roles              |
+| `{server.channelcount}` | Number of channels           |
+| `{server.ownerid}`      | Server owner's ID            |
+| `{server.owner}`        | Server owner's tag           |
+| `{server.createdat}`    | When the server was created  |
+
+---
+
+## Welcome Embed Variables
+
+| Variable               | Explanation                  |
+| ---------------------- | ---------------------------- |
+| `{user.id}`            | User's Discord ID            |
+| `{user.username}`      | Username only                |
+| `{user.mention}`       | Mentions the user            |
+| `{user.avatar}`        | User's avatar URL            |
+| `{user.nick}`          | User's nickname              |
+| `{user.rolehex}`       | User's top role color (hex)  |
+| `{user.createdat}`     | When the user joined Discord |
+| `{server.id}`          | Server's ID                  |
+| `{server.name}`        | Server name                  |
+| `{server.membercount}` | Total members                |
+| `{server.botcount}`    | Number of bots               |
+| `{server.humancount}`  | Number of humans             |
+| `{server.icon}`        | Server icon URL              |
+
+---
+
+## Last.fm Embed Variables
+
+| Variable               | Explanation                 |
+| ---------------------- | --------------------------- |
+| `{user.name}`          | Last.fm username            |
+| `{user.avatar}`        | Last.fm avatar URL          |
+| `{user.plays}`         | Total plays (raw)           |
+| `{user.properplays}`   | Total plays (formatted)     |
+| `{user.url}`           | Last.fm profile link        |
+| `{author.mention}`     | Mentions the command author |
+| `{author.name}`        | Author's username           |
+| `{author.nickname}`    | Author's nickname           |
+| `{author.avatar}`      | Author's avatar URL         |
+| `{album.name}`         | Album name                  |
+| `{album.url}`          | Album link                  |
+| `{album.cover}`        | Album cover image           |
+| `{album.plays}`        | Album plays (raw)           |
+| `{album.playcount}`    | Album play count            |
+| `{album.properplays}`  | Album plays (formatted)     |
+| `{track.name}`         | Track name                  |
+| `{track.url}`          | Track link                  |
+| `{track.cover}`        | Track cover image           |
+| `{track.plays}`        | Track plays (raw)           |
+| `{track.playcount}`    | Track play count            |
+| `{track.properplays}`  | Track plays (formatted)     |
+| `{artist.name}`        | Artist name                 |
+| `{artist.plays}`       | Artist plays (raw)          |
+| `{artist.playcount}`   | Artist play count           |
+| `{artist.properplays}` | Artist plays (formatted)    |
+| `{artist.url}`         | Artist link                 |
+| `{artist.image}`       | Artist image                |
+
+---
+
+**Tip:**\
+Use these variables in your embed text, title, or description.

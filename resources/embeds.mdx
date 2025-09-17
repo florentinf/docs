@@ -1,5 +1,141 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Embeds"
 ---
 
+Create, edit, and use rich embeds anywhere neon can post messages.
+
+<Note>
+  **What is an embed?**
+
+  An embed is a rich message with colors, images, and fields. You can use embeds for welcomes, booster messages, autorepliers and much more.
+</Note>
+
+## Quick start with examples
+
+1. Create an embed:\
+   `n!embed create [embedName]`
+
+   > `n!embed create welcome`
+2. Set content:\
+   `n!embed edit [embedName] [property] [newValue]`\\
+
+   > `n!embed edit welcome title Welcome, {user.tag}!`
+   > `n!embed edit welcome description Enjoy your stay in {server.name}.`\
+   > `n!embed edit welcome color #16A34A`
+3. Send it:\
+   `n!embed send [channel] [embedName]`
+
+   > Example: `n!embed send #general welcome`
+4. List your embeds:\
+   `n!embed list`
+
+## Usage
+
+```
+n!embed create [embedName]
+n!embed edit [embedName] [property] [newValue]
+n!embed send [channel] [embedName]
+n!embed delete [embedName]
+n!embed refresh [embedName] [messageLink]
+n!embed list
+n!embed variables
+```
+
+## Properties
+
+Use edit to change any property.
+
+- **description** — Main text body\
+  Example: `n!embed edit welcome description Hello {user.mention}!`
+- **url** — Makes the title clickable\
+  Example: `n!embed edit welcome url https://example.com`
+- **timestamp** — Adds a timestamp (now)\
+  Example: `n!embed edit welcome timestamp true`
+- **color** — Hex or integer color\
+  Example: `n!embed edit welcome color #16A34A`
+- **thumbnail** — Small image (top-right)\
+  Example: `n!embed edit welcome thumbnail https://…/thumb.png`
+- **image** — Large image (bottom)\
+  Example: `n!embed edit welcome image https://…/banner.png`
+- **author** — Author text or "name | icon | url"\
+  Example: `n!embed edit welcome author Neon Bot | https://…/icon.png | https://neonbot.xyz`
+- **footer** — Footer text or "text | icon"\
+  Example: `n!embed edit welcome footer Welcome to {server.name} | https://…/icon.png`
+
+## Variables
+
+These auto-fill with live data when the message is sent.
+
+```
+{user.id}
+{user.tag}
+{user.username}
+{user.mention}
+{user.avatar}
+{user.nickname}
+{user.rolehex}
+{user.createdat}
+{server.id}
+{server.name}
+{server.membercount}
+{format.membercount}
+{server.botcount}
+{server.humancount}
+{format.humancount}
+{server.icon}
+{server.rolecount}
+{server.channelcount}
+{server.ownerid}
+{server.owner}
+{server.createdat}
+```
+
+## Subcommands
+
+- **create**\
+  Make a new embed.\
+  `n!embed create [embedName]`
+- **edit**\
+  Change a property.\
+  `n!embed edit [embedName] [property] [newValue]`
+- **send**\
+  Post an embed to a channel.\
+  `n!embed send [channel] [embedName]`
+- **delete**\
+  Remove a stored embed.\
+  `n!embed delete [embedName]`
+- **list**\
+  Show all stored embeds.\
+  `n!embed list`
+- **variables**\
+  Show all available variables.\
+  `n!embed variables`
+- **refresh**\
+  Re-sync a sent message with the latest stored embed (use a message link).\
+  `n!embed refresh [embedName] [messageLink]`
+
+## Examples
+
+```
+n!embed create wlcEmbed
+n!embed edit wlcEmbed title A user just joined! {user.tag}.
+n!embed edit wlcEmbed description Welcome to {server.name}. We now have {format.membercount} members.
+n!embed edit wlcEmbed color #16A34A
+n!embed edit wlcEmbed thumbnail {server.icon}
+n!embed edit wlcEmbed image https://example.com/banner.png
+n!embed send #welcome wlcEmbed
+```
+
+```
+n!embed delete wlcEmbed
+n!embed list
+n!embed refresh wlcEmbed https://discord.com/channels/123/456/789
+```
+
+## Tips
+
+- Use variables to personalize welcomes, leaves, and announcements.
+- Keep colors readable against Discord’s background.
+- Re-use the same embed across features (welcome, leave, schedule posts).\
+  In supported features, you can reference a stored embed by name like: `{_embed_:Embed_Name}`
+- If you edit a stored embed after sending, use refresh to update a specific message.
