@@ -15,6 +15,16 @@
             "pages": [
               "index"
             ]
+          },
+          {
+            "group": "Security",
+            "pages": [
+              "security",
+              "security/antinuke",
+              "security/antiraid",
+              "security/automod",
+              "security/fakeperms"
+            ]
           }
         ]
       }
