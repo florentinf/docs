@@ -17,6 +17,15 @@
             ]
           },
           {
+            "group": "Guides",
+            "pages": [
+              "guides/welcome",
+              "guides/logging",
+              "guides/permissions",
+              "guides/troubleshooting"
+            ]
+          },
+          {
             "group": "Security",
             "pages": [
               "security",
@@ -24,6 +33,23 @@
               "security/antiraid",
               "security/automod",
               "security/fakeperms"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "resources/embeds",
+              "resources/variables"
+            ]
+          },
+          {
+            "group": "Commands",
+            "pages": [
+              "commands/index",
+              "commands/utilities",
+              "commands/lastfm",
+              "commands/moderation",
+              "commands/music"
             ]
           }
         ]
