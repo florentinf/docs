@@ -1,0 +1,35 @@
+---
+title: "Automod"
+---
+
+Automod blocks unwanted words and phrases in messages.
+
+## What it does
+
+- Deletes messages with blacklisted words.
+- Lets you whitelist certain words or bypass roles.
+- Can set up automated punishments like kick or mute for repeated offenses.
+
+## Usage
+
+```
+n!automod blacklist [word]
+n!automod whitelist [word]
+n!automod bypass [role]
+n!automod config
+```
+
+## Recommended Settings
+
+- Add common spam, scam, and offensive words to the blacklist.
+- Whitelist words that are allowed but might be flagged by mistake.
+- Bypass trusted roles like so they aren't affected.
+- Regularly review and update your blacklist and whitelist.
+
+**Example:**
+
+```
+n!automod blacklist scam, spam, badword
+n!automod whitelist idk
+n!automod bypass @role
+```

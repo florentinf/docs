@@ -1,0 +1,39 @@
+---
+title: "Antiraid "
+---
+
+Antiraid protects your server from mass join raids.
+
+## What it does
+
+- Detects when multiple users join in a short time.
+- Auto-kicks or bans suspicious accounts.
+- Lets you set a threshold for how many joins trigger the protection.
+- Logs all raid events to a channel.
+
+## Usage
+
+```
+n!antiraid enable
+n!antiraid logchannel [channel]
+n!antiraid action [kick/ban]
+n!antiraid threshold [2-10]
+n!antiraid config
+```
+
+## Recommended Settings
+
+- Set the action to "ban" for higher security, or "kick" for less strict.
+- Use a threshold of 3–5 joins in 2 seconds for medium-sized servers.
+- Always set a log channel to keep track of raid events.
+
+**Example:**
+
+```
+n!antiraid enable
+n!antiraid action ban
+n!antiraid threshold 4
+n!antiraid logchannel #antiraidlog
+```
+
+---

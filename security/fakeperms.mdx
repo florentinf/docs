@@ -1,0 +1,40 @@
+---
+title: "Fake Permissions"
+---
+
+---
+
+Fake Permissions let you give roles or users permission to use bot commands, even if they don't have the real Discord permissions.
+
+## What it does
+
+- Grants "fake" permissions for bot commands.
+- Lets you control which roles/users can use specific commands.
+- Useful for giving trusted mods more access without making them full admins.
+
+## Usage
+
+```
+n!fp grant [role/user] [permission]
+n!fp remove [role/user] [permission]
+n!fp list (role or user)
+n!fp permissions
+```
+
+## Recommended Settings
+
+- Grant administrator fake perms only to co-owners or trusted staff.
+- Give admin roles permissions like manage_messages, moderate_members, manage_nicknames, manage_roles, ban_members, kick_members.
+- Give mod roles basic moderation permissions (manage_messages, moderate_members, kick_members).
+- Only grant permissions to roles/users you trust.
+
+**Example:**
+
+```
+n!fp grant @coowner administrator
+n!fp grant @admin manage_messages
+n!fp grant @mod kick_members
+n!fp list
+```
+
+---

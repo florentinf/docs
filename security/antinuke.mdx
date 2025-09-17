@@ -1,0 +1,42 @@
+---
+title: "Antinuke"
+---
+
+Antinuke protects your server from destructive actions by staff, like mass bans or channel deletions.
+
+## What it does
+
+- Monitors actions like emoji, channel, and role creation/deletion, as well as member kicks and bans.
+- Lets you set a threshold for each type of action—if too many happen too quickly, Antinuke steps in.
+- You can choose how to punish: kick, ban, or remove roles from the offending user.
+- Whitelist trusted staff so Antinuke ignores their actions (only whitelist people you fully trust!).
+
+## Usage
+
+```
+n!antinuke enable [module]
+n!antinuke disable [module]
+n!antinuke logchannel [channel/none]
+n!antinuke action [module] [kick/ban/removeroles/none]
+n!antinuke threshold [module] [2-10]
+n!antinuke whitelist [user]
+```
+
+## Recommended Settings
+
+- Enable protection for all modules (emojiDelete, channelCreate, channelDelete, roleCreate, roleDelete, memberKick, memberBan).
+- Set actions for dangerous permissions (like ban or removeroles) to "ban" or "stripstaff".
+- Use low thresholds for channel/role/emoji deletes (1–2).
+- Only whitelist users who are completely trusted.
+- Make one owner an Antinuke admin so only they can change these settings.
+
+**Example:**
+
+```
+n!antinuke enable channelDelete
+n!antinuke action channelDelete ban
+n!antinuke threshold channelDelete 1
+n!antinuke whitelist @trustedmod
+```
+
+---
